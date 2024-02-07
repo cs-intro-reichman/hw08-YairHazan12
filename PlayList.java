@@ -100,11 +100,11 @@ class PlayList {
     }
      
     private void addIni(int j, Track track) {
-        this.size ++;
-        for (int i = size-1; i > j-1; i--) {
+        for (int i = size; i > j; i--) {
             this.tracks[i] = this.tracks[i-1];
         }
         this.tracks[j] = track;
+        this.size ++;
     }
 
     /** Removes the track in the given index from this list.
